@@ -54,7 +54,7 @@ def train_model(n_iter):
             _, loss_val, alpha_val, prob_val,v0_val,x_val,y_val = \
             sess.run([train, loss, alpha_var, prob_var,v0_var,x,y])
             loss_values.append(loss_val)
-            if np.prod(np.isclose(y_val,est[0:99],atol=).astype(np.int)) == 1:
+            if np.prod(np.isclose(y_val,est[0:99],atol=95e4).astype(np.int)) == 1:
                 y_vals.append(y_val)
                 captured.append((alpha_val,prob_val,v0_val,x_val))
                 print("captured")
