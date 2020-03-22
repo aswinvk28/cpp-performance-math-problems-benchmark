@@ -58,5 +58,10 @@ The input time series is taken to be a steadily increasing flow to model the flu
 
 - **For calibrating the model, units per cell parameter has been used which relates to number of air particles in the estimated relation over a length `l`**
 
+Units per cell between bounded areas showing the intervals, as it starts from a value of 1 and then adjusts itself to the predicted units per cell
+
 ![./units_per_cell.png](./units_per_cell.png)
 
+The Volumetric Units per cell within the interval
+
+![./units_calibrated.png](./units_calibrated.png)
