@@ -11,12 +11,15 @@ v0 = 0.28
 
 def draw_plots(series,estimated,navier_stokes,units_per_cell):
     plt.plot(np.linspace(0,100,total),series(np.linspace(0,2,total)))
+    plt.title("The input time series")
     plt.show()
 
-    est = estimated(x,length,dt,dx,series(np.linspace(0,2,total)))
+    est = estimated(length,dt,dx,series(np.linspace(0,2,total)))
     plt.plot(np.linspace(0,100,len(est)),est)
+    plt.title("The estimated navier stokes relation")
     plt.show()
 
     act = navier_stokes(v0,dt,dx,alpha,length)*units_per_cell(length)
     plt.plot(np.linspace(0,100,len(act)),act)
+    plt.title("The actual computed navier stokes relation")
     plt.show()

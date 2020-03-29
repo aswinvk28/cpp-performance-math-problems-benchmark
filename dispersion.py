@@ -27,7 +27,7 @@ def navier_stokes(v0,dt,dx,alpha,length):
         pot[i] = qty
     return pot
 
-def estimated(x,length,dt,dx,series):
+def estimated(length,dt,dx,series):
     return units_per_cell(length)*\
 (prob_retention(x,length))*\
 dimensionless_constant(length)*\
